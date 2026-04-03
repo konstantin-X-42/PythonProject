@@ -80,3 +80,6 @@ def get_mask_account(number_account: [str | int] = -1) -> str:
 
 
 print(get_mask_account("73654108430135874305"))
+
+
+print("Тест ветки"))
