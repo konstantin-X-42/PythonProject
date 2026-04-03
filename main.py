@@ -82,4 +82,20 @@ def get_mask_account(number_account: [str | int] = -1) -> str:
 print(get_mask_account("73654108430135874305"))
 
 
-print("Тест ветки"))
+
+
+import requests
+
+def check_connection():
+    try:
+        # Делаем запрос к сервису, который возвращает ваш IP
+        response = requests.get('https://ipify.org')
+        # Превращаем ответ в словарь Python
+        data = response.json()
+        print(f"✅ Соединение успешно! Ваш публичный IP: {data['ip']}")
+    except Exception as e:
+        print(f"❌ Ошибка соединения: {e}")
+
+if __name__ == "__main__":
+    print("Проверка сетевого статуса...")
+    check_connection()
